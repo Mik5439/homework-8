@@ -152,8 +152,7 @@ class TestGetBirthdaysPerWeek(unittest.TestCase):
             {"name": "Alice", "birthday": (self.today + timedelta(days=-3)).date()},
         ]
         result = get_birthdays_per_week(users)
-#        expected = {"Wednesday": ["John"], "Friday": ["Doe"]}
-         expected = {'Wednesday': ['John'], 'Friday': ['Doe']}
+        expected = {"Wednesday": ["John"], "Friday": ["Doe"]}
         assert (
             result == expected
         ), """3. Провалено тест бо функція повернула не правильний список днів народження користувачів які є у майбутньому та вони не припадають на вихідні"""
